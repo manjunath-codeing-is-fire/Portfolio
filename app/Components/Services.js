@@ -34,7 +34,7 @@ const Services = ({isDarkMode}) => {
             initial = {{y:-20,opacity:0}} 
             whileInView = {{y:0,opacity:1}} 
             transition={{delay:0.5,duration:0.5}}  
-            className='grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-12 my-10'>
+            className='grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-12 my-10 max-sm:pl-6'>
                 {serviceData.map(({icon,title,description,link},index)=>(
                     
                     <motion.div 
