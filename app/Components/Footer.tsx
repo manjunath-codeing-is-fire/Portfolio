@@ -12,9 +12,10 @@ const Footer = ({isDarkMode} : props ) => {
         <div className='text-center'>
             <h2 className='text-xl font-bold'>Manjunath <span className='text-red-600 text-3xl'>.</span></h2>
 
-            <div className='w-max flex items-center gap-2 mx-auto'>
-                <Image alt="" src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} className='w-6'/>
-                manjunathkavalikai9@gmail.com
+            <div className='w-max items-center gap-2 mx-auto'>
+                <Image alt="" src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} className='w-6 inline-flex'/>
+                <h5 className='inline-flex ml-2'>manjunathkavalikai9@gmail.com</h5>
+                <h5>+919353019944</h5>
             </div>
         </div>
 
