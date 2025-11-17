@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from "motion/react"
 import { assets } from '@/assets/assets'
 // resume here
 
-export default function Header() {
+const Header = () => {
+
   return (
     <>
+
       <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-1'>
 
         <motion.div
@@ -40,7 +42,7 @@ export default function Header() {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="#contact" className='px-5 py-1 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me
+            href="#contact" className='px-5 py-1 border border-white rounded-full flex items-center gap-2 bg-transparent hover:bg-white/15'>contact me
             <Image alt="" src={assets.right_arrow_white} className='w-2' />
           </motion.a>
 
@@ -48,7 +50,7 @@ export default function Header() {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="./manjunathk-resume.pdf" download className='px-5 py-1 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume
+            href="./manjunathk-resume.pdf" download className='px-5 py-1 border rounded-full border-gray-500 flex items-center gap-2 bg-white text-black hover:bg-white/30 hover:text-white'>my resume
             <Image alt="" src={assets.download_icon} className='w-4' />
           </motion.a>
         </div>
@@ -57,3 +59,4 @@ export default function Header() {
   )
 }
 
+export default Header

@@ -2,18 +2,14 @@ import Image from 'next/image'
 import { motion } from "motion/react"
 import { assets, infoList, toolsData } from '@/assets/assets'
 
-type props = {
-  isDarkMode: boolean
-}
-
-const About = ({ isDarkMode }: props) => {
+const About = () => {
   return (
     <motion.div
       id="about"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className='w-full py-10 max-sm:pb-[54rem]'>
+      className='w-full py-10 max-sm:pb-216'>
 
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -28,7 +24,7 @@ const About = ({ isDarkMode }: props) => {
         className='text-center text-5xl font-Ovo'>About me</motion.h2>
 
       <div
-        className='flex w-full flex-col lg:flex-row items-center gap-6 h-[40rem] px-16 sm:px-3'>
+        className='flex w-full flex-col lg:flex-row items-center gap-6 h-160 px-16 sm:px-3'>
 
         {/* user image div */}
         <motion.div
@@ -39,7 +35,7 @@ const About = ({ isDarkMode }: props) => {
           <Image
             src={assets.user_image}
             alt='user'
-            className='h-[26rem] w-80 rounded-3xl object-cover max-sm:h-[18rem] max-sm:w-[16rem]' />
+            className='h-104 w-80 rounded-3xl object-cover max-sm:h-72 max-sm:w-[16rem]' />
         </motion.div>
 
         <motion.div
@@ -58,10 +54,10 @@ const About = ({ isDarkMode }: props) => {
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 // whileInView = {{scale:1.05}} 
-                key={index} className='border-[0.5px] border-gray-400 rounded-xl h-56 cursor-pointer hover:-translate-y-1 hover:shadow-[3px_3px_0_#000] ] duration-500 p-3 dark:border-white dark:hover:shadow-white dark:hover:bg-[#2a004a]/50 max-w-72'>
-                <Image src={isDarkMode ? iconDark : icon} alt={title} className='w-5 mt-3' />
+                key={index} className='border-[0.5px] rounded-xl h-56 cursor-pointer hover:-translate-y-1 hover:shadow-[3px_3px_0_#000] ] duration-500 p-3 border-white hover:shadow-white max-w-72'>
+                <Image src={iconDark} alt={title} className='w-5 mt-3' />
                 <h3 className='text-xl my-4 font-semibold text-gray-700 dark:text-white'>{title}</h3>
-                <p className='text-gray-600 text-[18px] dark:text-white'>{description}</p>
+                <p className='text-[18px]'>{description}</p>
               </li>
             ))}
           </ul>
@@ -70,7 +66,7 @@ const About = ({ isDarkMode }: props) => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='my-6 text-gray-700 font-Ovo dark:text-white/80 text-3xl lg:-translate-x-14'>Tools I use</motion.h4>
+            className='my-6 font-Ovo text-white/80 text-3xl lg:-translate-x-14'>Tools I use</motion.h4>
 
           <motion.ul
             initial={{ opacity: 0, scale: 0.9 }}
