@@ -51,7 +51,7 @@ const About = () => {
             //  whileInView = {{opacity:1}} 
             //  transition={{duration:1,delay:1}}  
             className='text-xs grid grid-cols-1 gap-5 sm:grid-cols-3 max-w-5xl'>
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
+            {infoList.map(({ iconDark, title, description }, index) => (
               <li
                 // whileInView = {{scale:1.05}} 
                 key={index} className='border-[0.5px] rounded-xl h-56 cursor-pointer hover:-translate-y-1 hover:shadow-[3px_3px_0_#000] ] duration-500 p-3 border-white hover:shadow-white max-w-72'>
